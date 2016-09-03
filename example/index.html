@@ -1,0 +1,96 @@
+<html>
+<head>
+<link rel="stylesheet" href="http://vjs.zencdn.net/5.9.2/video-js.css">
+
+<script type="text/javascript" src="http://vjs.zencdn.net/5.9.2/video.js"></script>
+
+<script type="text/javascript" src="https://cdn.viblast.com/vb/stable/viblast.js"></script>
+
+<link rel="stylesheet" href="videojs.viblast-menu.css">
+<script type="text/javascript" src="videojs.viblast-menu.js"></script>
+
+
+</head>
+
+<body>
+<div>
+Video:
+<video id="video"
+  controls
+  height="200"
+  width="300"
+  class="video-js vjs-default-skin"
+  autoplay
+>
+ <source src="http://cdn3.viblast.com/streams/hls/airshow/playlist.m3u8" type='application/x-mpegURL' />
+</video>
+</div>
+<div>
+Audio only:
+<video id="audio"
+  controls
+  height="200"
+  width="300"
+  class="video-js vjs-default-skin"
+  autoplay
+>
+ <source src="http://db3.indexcom.com/bucket/ram/00/05/05.m3u8" type='application/x-mpegURL' />
+</video>
+</div>
+<script>
+
+  createCustomQualityVideoLabel = function(quality,index) {
+	if (quality === 'auto') {
+		return "auto";
+	}
+	return quality.width+"x"+quality.height;
+  }
+ 
+  createCustomQualityDefaultLabel = function(quality, index) {
+		if (quality === 'auto') {
+			return "auto";
+		}
+		return quality.width+"x"+quality.height;
+	  }
+
+  createCustomQualityAudioLabel = function(quality,index) {
+		if (quality === 'auto') {
+			return "auto";
+		}
+		return quality.width+"x"+quality.height;
+	  }
+
+
+  videojs('video', {
+    controls: true,
+    plugins: {
+    	ViblastQualityMenu: { 
+		 	customLabel: {
+    		/*pass your own quality label creator function like this :*/ 
+    		 		audioStream:createCustomQualityAudioLabel,
+    		 		videoStream:createCustomQualityVideoLabel, 
+    		 		default:createCustomQualityDefaultLabel
+    		 	}
+    	
+    		}
+    	}
+	});
+	
+  videojs('audio', {
+	    controls: true,
+	    plugins: {
+	    	ViblastQualityMenu: { 
+	    		/*pass your own quality label creator function like this :*/ 
+	    		 	customLabel: {
+	    		 		audioStream:createCustomQualityAudioLabel,
+	    		 		videoStream:createCustomQualityVideoLabel, 
+	    		 		default:createCustomQualityDefaultLabel
+	    		 	}
+	    	
+	    		}
+	    	}
+		});
+
+  </script>
+</body>
+</html>

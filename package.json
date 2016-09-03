@@ -1,0 +1,25 @@
+{
+  "name": "videojs-viblast-menu",
+  "version": "0.0.1",
+  "description": "This plugin provides Viblast Player quality menu control to Video.js framework.",
+  "main": "videojs.viblast-menu.js",
+  "author": "Viblast LLC",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Viblast/videojs-viblast-menu.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Viblast/videojs-viblast-menu/issues"
+  },
+  "homepage": "https://github.com/Viblast/videojs-viblast-menu",
+  "keywords": [
+    "videojs",
+    "videojs-plugin",
+    "viblast",
+    "quality",
+    "video"
+  ],
+  "devDependencies": {
+  }
+}

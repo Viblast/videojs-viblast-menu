@@ -1,0 +1,31 @@
+.viblast-quality-menu .vjs-menu-icon:before {
+  content: '\f110';
+  font-family: VideoJS;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.8em;
+  line-height: 1.67em;
+}
+
+.viblast-quality-menu .vjs-resolution-button-label {
+  font-size: 1em;
+  line-height: 3em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  box-sizing: inherit;
+}
+
+.viblast-quality-menu .vjs-menu .vjs-menu-content {
+  width: 4em;
+  left: 50%;
+  margin-left: -2em;
+}
+
+.viblast-quality-menu .vjs-menu li {
+  text-transform: none;
+  font-size: 0.9em;
+}

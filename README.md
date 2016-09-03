@@ -1,5 +1,9 @@
 This plugin provides Viblast Player quality menu control to Video.js framework.
 
+### Example
+
+Visit http://viblast.github.io/videojs-viblast-menu/example
+
 ### Usage
 
 - Include the plugin after viblast.js:
